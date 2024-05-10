@@ -1,0 +1,16 @@
+# Maven target directory
+/target/
+
+# IntelliJ IDEA files
+.idea/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# Spring Boot application properties
+src/main/resources/application.properties
+
+# Log files
+*.log
