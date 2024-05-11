@@ -38,8 +38,7 @@ public class User implements UserDetails, Principal {
     @Column(unique = true)
     private String email;
     private String password;
-    private boolean accountLocked;
-    private boolean enabled;
+
 
     @CreatedDate
     @Column(nullable = false, updatable = false)
@@ -76,7 +75,7 @@ public class User implements UserDetails, Principal {
 
     @Override
     public boolean isAccountNonLocked() {
-        return !accountLocked;
+        return true;
     }
 
     @Override
@@ -86,8 +85,9 @@ public class User implements UserDetails, Principal {
 
     @Override
     public boolean isEnabled() {
-        return enabled;
+        return false;
     }
+
 
     public String getFullName() {
         return firstname + " " + lastname;

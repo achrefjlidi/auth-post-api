@@ -17,7 +17,7 @@ public class PostService {
 
     private final PostRepository postRepository;
 
-    public Object findAllBooks(int page, int size, Authentication connectedUser) {
+    public Object findAllPosts(int page, int size, Authentication connectedUser) {
         User user = ((User) connectedUser.getPrincipal());
         List<Post> posts = postRepository.findAll();
         return posts;

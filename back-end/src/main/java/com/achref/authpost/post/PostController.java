@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("posts")
+@RequestMapping("post")
 @RequiredArgsConstructor
 @Tag(name = "post")
 public class PostController {
@@ -18,7 +18,7 @@ public class PostController {
     private final PostService service;
 
     @PostMapping("/add-post")
-    public ResponseEntity<Long> saveBook(
+    public ResponseEntity<Long> savePost(
             @Valid @RequestBody PostRequest request,
             Authentication connectedUser
     ) {
@@ -26,11 +26,11 @@ public class PostController {
     }
 
     @GetMapping("/posts")
-    public ResponseEntity<?> findAllBooks(
+    public ResponseEntity<?> findAllPosts(
             @RequestParam(name = "page", defaultValue = "0", required = false) int page,
             @RequestParam(name = "size", defaultValue = "5", required = false) int size,
             Authentication connectedUser
     ) {
-        return ResponseEntity.ok(service.findAllBooks(page, size, connectedUser));
+        return ResponseEntity.ok(service.findAllPosts(page, size, connectedUser));
     }
 }
