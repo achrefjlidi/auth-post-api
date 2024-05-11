@@ -38,22 +38,19 @@ This project is a CRUD (Create, Read, Update, Delete) application implemented wi
 - **Backend (Spring Boot)**:
   - `src/main/java`: Java source files
     - `com.achref.authpost`: Main application package
-      - `auth`:
-      - `config`: 
-      - `post`: 
-      - `security`
-      - `user` 
+      - `auth`: Contains classes related to authentication functionality.
+      - `config`: Houses configuration classes for application setup.
+      - `post`: Includes classes for post or content management.
+      - `security` : Holds security-related classes and configurations.
+      - `user` : Contains classes related to user management and operations.
   - `src/main/resources`: Resource files (application.properties for database configuration)
 
 - **Frontend (Angular)**:
   - `src/app`: Angular application components, services, and modules
     - `pages`: Contains components for login, registration, profile, user listing, post listing, etc.
     - `services`: Angular services to communicate with backend APIs using HttpClient
-    - `models`: TypeScript models/interfaces for data structures (e.g., User, Post)
-    - `guards`: Angular guards for route protection (e.g., AuthGuard)
+    - `modules`: TypeScript modules for data structures.
 
-
-Certainly! To specify the port numbers for your Spring Boot backend (running on port 8083) and Angular frontend (running on port 4200), you can update the setup instructions and configuration accordingly.
 
 ### Setup Instructions
 
@@ -76,7 +73,7 @@ Certainly! To specify the port numbers for your Spring Boot backend (running on 
 3. **Run the Spring Boot Application**
    - Navigate to the project directory:
      ```bash
-     cd <project_directory>//back_end
+     cd <project_directory>/back_end
      ```
    - Build and run the application:
      ```bash
